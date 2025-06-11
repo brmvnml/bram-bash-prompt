@@ -85,6 +85,20 @@ Become a sponsor and get your logo on our README on GitHub with a link to your s
 <a href="https://opencollective.com/sexy-bash-prompt/sponsor/29/website" target="_blank"><img src="https://opencollective.com/sexy-bash-prompt/sponsor/29/avatar.svg"></a>
 
 ## Installation
+@bram zegt doe dit:
+
+```bash
+DIR="${HOME}/.sexy-bash-prompt"; \
+if [ -d "$DIR" ]; then \
+  cd "$DIR" && git fetch origin && git reset --hard origin/master; \
+else \
+  git clone --depth 1 --config core.autocrlf=false \
+    https://github.com/brmvnml/bram-bash-prompt "$DIR" && cd "$DIR"; \
+fi && \
+make install && \
+source "${HOME}/.bashrc"
+```
+
 One line install (requires `git`, `make`):
 
 ```bash
